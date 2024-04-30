@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="./style.css">
+<div id="toast"></div>
+
+<div>
+  <div onclick="showSuccessToast();" class="btn btn--success">Show success toast</div>
+  <div onclick="showErrorToast();" class="btn btn--error">Show error toast</div>
+  <div onclick="showInforToast();" class="btn btn--infor">Show infor toast</div>
+  <div onclick="showWarningToast();" class="btn btn--warning">Show warning toast</div>
+  
+</div>
+
+<script>
+  function showSuccessToast() {
+    toast({
+      title: "Thành công!",
+      message: "Bạn đã đăng ký thành công tài khoản tại F8.",
+      type: "success",
+      duration: 5000
+    });
+  }
+
+  function showInforToast(){
+    toast({
+      title: "Thiếu thông tin!",
+      message: "Cần nhập đủ thông tin trước khi sang tab mới.",
+      type: "infor",
+      duration: 5000
+    });
+  }
+
+  function showWarningToast(){
+    toast({
+      title: "Đăng nhập nhiều thiết bị!",
+      message: "Phát hiện thiết bị lạ đăng nhập vào tài khoản của ban.",
+      type: "warning",
+      duration: 5000
+    })
+  }
+  function showErrorToast() {
+    toast({
+      title: "Thất bại!",
+      message: "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
+      type: "error",
+      duration: 5000
+    });
+  }
+
+</script>
+<script src="./main.js"></script>
